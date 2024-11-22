@@ -1,7 +1,5 @@
-function ShowTileNormals(APCoords, UECoords, clearance)
-    normLength = 1;
-    plotscale = 0.3;
-    
+function ShowTileNormals(APCoords, UECoords, clearance, normLength)
+
     % Calculate precise dimensions
     f = 28e9;
     c = physconst('LightSpeed');
@@ -45,9 +43,7 @@ function ShowTileNormals(APCoords, UECoords, clearance)
     xlabel('X', 'FontWeight','bold');
     ylabel('Y', 'FontWeight','bold');
     zlabel('Z', 'FontWeight','bold');
-    xlim([-plotscale plotscale]);
-    ylim([-plotscale plotscale]);
-    zlim([-plotscale plotscale]);
+    daspect([1 1 1]);
     hold off;
 
 end
